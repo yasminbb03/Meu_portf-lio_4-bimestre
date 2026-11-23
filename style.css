@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fundo: #f7f8fc;
+  --cartao: #ffffff;
+  --texto: #29243a;
+  --roxo: #7653c6;
+  --borda: #e8e4f0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1000px, 90%);
+  margin: auto;
+}
+
+header {
+  background: var(--cartao);
+  border-bottom: 1px solid var(--borda);
+}
+
+nav {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--texto);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span, h1 span {
+  color: var(--roxo);
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+}
+
+.menu a, .contatos a {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu a:hover, .contatos a:hover {
+  color: var(--roxo);
+}
+
+.hero {
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.destaque {
+  color: var(--roxo);
+  font-size: .8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.hero h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.hero p:not(.destaque), .secao p {
+  max-width: 750px;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--roxo);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.secao {
+  padding-top: 38px;
+  padding-bottom: 20px;
+}
+
+.secao h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  padding: 20px;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: var(--roxo);
+}
+
+.projeto-safeway img {
+  display: block;
+  width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+.contatos {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.contatos a {
+  color: var(--roxo);
+  font-weight: bold;
+}
+
+.aviso {
+  margin-top: 12px;
+  font-size: .85rem;
+  opacity: .75;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 22px;
+  text-align: center;
+  background: var(--cartao);
+  border-top: 1px solid var(--borda);
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+}
